@@ -7,6 +7,7 @@ from fitness_fox.models import Workout
 from fitness_fox import db
 from sqlalchemy import and_, func
 
+
 @app.route('/AddActivity.html')
 def setValue():
     return render_template('AddActivity.html')
@@ -25,6 +26,7 @@ def getValue():
 	db.session.commit()
 	return render_template('Success.html')
 
+@app.route('/')
 @app.route('/Chart.html')
 def view():
 	from_date = datetime.now() - timedelta(days=7)

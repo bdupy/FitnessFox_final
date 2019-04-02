@@ -36,17 +36,22 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
   <script>
   $( function() {
     $( "#from" ).datepicker();
       $( "#to" ).datepicker();
   } );
+  
+   
   </script>
   <style>
   #components {
   margin: 0 auto;
   }
-  form  { display: table;      }
+ #contents { display: table;      }
 .activity    { display: table-row;  }
 label { display: table-cell; }
 input { display: table-cell; }
@@ -54,7 +59,7 @@ input { display: table-cell; }
 #nav_wrap {  
 margin-left: 43.5%;}
 
-form {
+#contents{
 margin:0 auto;
 }
 
@@ -121,7 +126,10 @@ margin:0 auto;
       <div class ="aside_section" style="margin:0 auto;"> 
            
             <div id="components" >
+			
+			
 			<form method= "post" action="">
+			<div id="contents" >
             <p class="activity"><label for ="a">Date:</label> <input type="date" name="activity_date" /> </p>
            <br>
 		  
@@ -131,14 +139,16 @@ margin:0 auto;
 		    <br>
 			<p class= "activity"<input type="number"><label for ="d"> Activity Duration (Minutes): </label><input type="number" name="mins"></p>
 			<br>
+			</div>
 			
-			
-  <br>
-		   <div id="nav_wrap" >
+			  <span>  <div id="nav_wrap" >
        
-            <button type="submit" class="btn btn-success" name = "submit" >Create</button>                                              
-            <button type="reset" class="btn btn-success" >Reset</button>
-            </div>
+            <button type="submit" class="btn btn-success" name = "submit"  >Create</button>                                              
+            <button type="reset" class="btn btn-danger" >Reset</button>
+      </div> </span>
+  <br>
+
+		 
 			</div>
 </form> 
 
