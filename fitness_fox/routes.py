@@ -7,10 +7,6 @@ from fitness_fox.models import Workout
 from fitness_fox import db
 from sqlalchemy import and_, func
 
-@app.route('/homepage.html')
-def setValue():
-    return render_template('homepage.html')
-
 @app.route('/AddActivity.html')
 def setValue():
     return render_template('AddActivity.html')
